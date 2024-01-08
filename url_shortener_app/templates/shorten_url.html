@@ -11,20 +11,24 @@
 </head>
 <body>
     <div class="form-container">
-        <h1>URL <span style="color: rgb(33, 48, 114);">Short</span>ener</h1>
+        
+        <h1>URL <span style="color:#2c456b;">Short</span>ener<span style="color:#2c456b;">.</span></h1>
         <h2>Create short links pages. Share them anywhere.</h2>
+        
         <form method="post" action="{% url 'shorten_url' %}">
             {% csrf_token %}
             <label for="long_url">Enter a long URL:</label>
             <input type="text" id="long_url" name="long_url" placeholder="Example: http://super-long-link.com/shorten-it">
             <button class="btn" type="submit">Get Shortened Link</button>
         </form>
+        
         <form method="post" action="{% url 'shorten_url' %}">
             {% csrf_token %}
             <label for="short_code">Enter your shortened created URL:</label>
             <input type="text" id="short_code" name="short_code" placeholder="Your Secret Code">
             <button class="btn" type="submit">Get Original Link</button>
         </form>
+        
         {% if shortened_url %}
             <p><b>Shortened URL: </b>{{ shortened_url }}</p>
         {% elif original_url %}
@@ -32,6 +36,7 @@
         {% else %}
             <p>&nbsp;</p>
         {% endif %}
+        
     </div>
 </body>
 </html>
