@@ -19,7 +19,7 @@ The project should contain a data storage method.
   
 ## instructions: 
 1. install Django
-2. open folder
+2. open folder `url-shortener-app-main`
 3. run `python manage.py runserver`
 4. open `http://127.0.0.1:8000/url-shortener/`
 
